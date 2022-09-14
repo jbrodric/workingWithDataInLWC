@@ -3,6 +3,7 @@ import FIRST_NAME from '@salesforce/schema/Contact.FirstName';
 import LAST_NAME from '@salesforce/schema/Contact.LastName';
 import EMAIL from '@salesforce/schema/Contact.Email';
 import getContacts from '@salesforce/apex/ContactController.getContacts';
+import { reduceErrors } from 'c/ldsUtils';
 const COLUMNS = [
     { label: 'First Name', fieldName: FIRST_NAME.fieldApiName, type: 'text' },
     { label: 'Last Name', fieldName: LAST_NAME.fieldApiName, type: 'text' },
