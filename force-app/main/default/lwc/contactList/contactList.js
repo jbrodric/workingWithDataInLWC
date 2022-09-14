@@ -13,4 +13,8 @@ export default class ContactList extends LightningElement {
     columns = COLUMNS;
     @wire(getContacts)
     contacts;
+    get errors() {
+        return (this.contacts.error) ?
+            reduceErrors(this.contacts.error) : [];
+    }
 }
